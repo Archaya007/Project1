@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+       class Employee{
+        constructor(p_id,p_name,p_salary){
+            this.id = p_id;
+            this.name =p_name;
+            this.salary=p_salary;
+        }
+        //Declaration method
+        display(){
+           document.writeln(this.id +"   " +this.name +"  " +this.salary+ "  ");
+        }
+       }
+       var emp1= new Employee(100,"Archu",25000);
+       emp1.display();
+       // to find the type of 
+        document.writeln(typeof(emp1));
+    </script>
+</body>
+</html>

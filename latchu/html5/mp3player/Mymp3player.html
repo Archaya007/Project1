@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        My mp3 player
+    </title>
+</head>
+<body>
+    <script>
+        function audio_play() {
+            audio.play();
+        }
+        function audio_pause() {
+            audio.pause();
+        }
+        function audio_mute() {
+            audio.volume = 0;
+        }
+        function audio_unmute() {
+            audio.volume = 1;
+        }
+    </script>
+    <h1>
+        HAPPY 76th INDEPENDENCE DAY
+    </h1>
+    <p>
+        <audio id="audio" src="audio/vande.mp3" controls></audio>
+    </p>
+    <p>
+        <button value="play" onclick="audio_play()"> play </button>
+        <button value="pause" onclick="audio_pause()"> pause </button>
+        <button value="mute" onclick="audio_mute()"> mute </button>
+        <button value="unmute" onclick="audio_unmute()"> unmute </button>
+    </p>
+</body>
+</html>

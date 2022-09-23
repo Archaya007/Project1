@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Simple Calculater
+        </title>
+    </head>
+    <body>
+        <form name="Calculator">
+            <table>
+                <tr>
+                    <td colspan="6">
+                        <input type="text" name="result" readonly/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+            <input type="button" value="1" onclick="Calculator.result.value +='1'"/>
+                    </td>
+                    <td>
+                        <input type="button" value="2" onclick="Calculator.result.value +='2'"/>
+                    </td>
+                    <td>
+                        <input type="button" value="+" onclick="Calculator.result.value +='+'"/>
+                    </td>
+                    <td>
+                        <input type="button" value="e" onclick="Calculator.result.value +='**'"/>
+                    </td>
+                    <td>
+                        <input type="button" value="=" onclick="Calculator.result.value =eval(Calculator.result.value)" />
+                    </td>
+                    <td>
+                        <input type="button" value="-" onclick="Calculator.result.value +='-'"/>
+                    </td>
+                    <td>
+                        <input type="button" value="*" onclick="Calculator.result.value +='*'"/>
+                    </td>
+                    <td>
+                        <input type="button" value="/" onclick="Calculator.result.value +='/'"/>
+                    </td>
+                </tr>
+            </table>  
+        </form>
+    </body>
+</html>   

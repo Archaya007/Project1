@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My video</title>
+    </head>
+    <body>
+        <script>
+            function video_play(){
+                video.play();
+            }
+            function video_pause(){
+                video.pause();
+            }
+            function video_fsv(){
+                video.requestFullscreen();
+            }
+            function video_pip(){
+                video.requestPictureInPicture();
+            }
+            function video_duration(){
+                alert(video.duration);
+            }
+        </script>
+        <video id="video" src="video/Life_Insurance.mp4" controls height="300" width="700"></video>
+        <p>
+        <button value="play" onclick="video_play()"> play </button>
+        <button value="pause" onclick="video_pause()"> pause </button>
+        <button value="fsv" onclick="video_fsv()"> full screen video </button>
+        <button value="pip" onclick="video_pip()"> pip </button>
+        <button value="duration" onclick="video_duration()"> duration</button>
+    </p>
+    </body>
+</html>

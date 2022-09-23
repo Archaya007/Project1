@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        function countVowel(str){
+        //     //gi is indicate to regular expression for case insensitive checks
+             const vowelCount =0;
+             vowelCount=str.match(/[aeiou]/gi).length;
+             return vowelCount;
+        }
+        const s_stringinput = prompt("enter a string");
+        const vowel_R = countVowel(s_stringinput);
+        alert(vowel_R);
+        if(vowelCount!=null)
+            alert(vowels.length);
+            else
+            alert("there is no constants");
+        //using forloop
+        for(i=0;i<count.length;i++){
+            if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'){
+                alert(count.length);
+            }
+            else{
+                alert("There is No vowels");
+            }
+        }
+        //using for loop with function
+        const vowels=["a","e","i","o","u"];
+        function countVowel(str){
+            let count=0;
+            for(let letter of str.toLowerCase()){
+                if(vowels.includes(letter)){
+                    count++;
+                }
+            }
+        }
+        //using if-else
+        const str = prompt("Enter the String");
+        const count = str.match(/[aeiou]/gi);
+        console.log(count);
+        if (count != null)
+            alert(count.length);
+        else
+            alert("There is No vowels");
+    </script>
+</body>
+</html>

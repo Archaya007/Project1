@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JS FORM
+    </title>
+</head>
+
+<body>
+    <script>
+        function getCube(){
+            var i_number = document.getElementById("p_number").value;
+            alert(i_number);
+        }
+    </script>
+    <form>
+        <label for="cube"> enter a number</label>
+        <input type="number" id="p_number" required="true" />
+        <button type="submit" onclick="getCube()"> submit</button>
+
+    </form>
+</body>
+
+</html>

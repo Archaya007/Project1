@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Employee Data
+    </title>
+</head>
+<body>
+    <form action="" method="post" name="employeedata">
+        <p><label for="firstname">FirstName</label>
+            <input type="text" name="firstname" id="fName" placeholder="Eg.Shiyamala" required="true" minlength="3"
+                maxlength="25" />
+        </p>
+        <p><label for="lastname">LastName</label>
+            <input type="text" name="lastname" id="lName" placeholder="Eg.R" required="true" size="10"
+                pattern="^[A-Za-z]$" />
+        </p>
+        <p><label for="deptid">DepartmentId</label>
+            <select name="" id="">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+            </select>
+        </p>
+        <p>
+            <label for="jobid">JobId</label>
+            <input type="number" name="jobid" id="jid" placeholder="0000" required="true" size="5" />
+        </p>
+        <p><label for="hiredate">HireDate</label>
+            <input type="date" name="hiredate" id="hdate" required="true" size="15" />
+        </p>
+        <p><label for="salary">Salary</label>
+            <input type="number" name="salary" id="sal" required="true" size="10" />
+        </p>
+        <p><label for="commission">Commission </label>
+            <input type="number" name="commission" id="com" required="true" size="3" />
+        </p>
+        <p><label for="managerid">ManagerId</label>
+            <input type="number" name="managerid" id="mid" required="true" size="6" />
+        </p>
+        <p><label for="mobileno">MobileNo</label>
+            <input type="tel" name="mobileno" id="mob" required="true" size="14" />
+        </p>
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+    </form>
+</body>
+</html>

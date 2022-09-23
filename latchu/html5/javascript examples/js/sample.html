@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Sample
+    </title>
+    <script>
+        function printMyName() {
+            var p_myName = document.getElementById("myName").value;
+            //alert(p_myName);
+            // document.write(p_myName);
+            document.getElementById("message").innerHTML="Hai" +p_myName;
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="myName"/>
+       
+        <input type="button" value="print" onclick="printMyName()"/>
+        <p><span id="message" style="color:red;"></span></p>
+    </form>
+</body>
+
+</html>
