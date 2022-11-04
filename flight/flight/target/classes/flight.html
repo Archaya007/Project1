@@ -1,0 +1,175 @@
+{{ model | json }}
+
+<div class="header" style="text-align:center">
+  <h1>FLIGHT BOOKING FORM</h1>
+  <h3>Start Your Journey Here!!!</h3>
+</div>
+<br />
+<form #f="ngForm" name="form" (ngSubmit)="addFlight()" class="row g-12">
+  <div>
+    <div class="col-12">
+      <label for="firstname">First Name</label>&nbsp;
+      <input
+        type="text"
+        id="fname"
+        name="firstname"
+        [(ngModel)]="model.firstname"
+      />
+    </div>
+    <br />
+    <div class="col-12">
+      <label for="lastname">Last Name</label>&nbsp;
+      <input
+        type="text"
+        id="lname"
+        name="lastname"
+        [(ngModel)]="model.lastname"
+      />
+    </div>
+    <br />
+    <div class="col-12">
+      <label for="email">Email id</label>&nbsp;
+      <input type="email" id="email" name="email" [(ngModel)]="model.email" />
+    </div>
+    <br />
+    <div class="col-12">
+      <label for="dob">Date Of Birth</label>&nbsp;
+      <input type="date" id="dob" name="dob" [(ngModel)]="model.dob" />
+    </div>
+    <br />
+    <label for="gender">Gender</label>
+    <div class="col-12">
+      <label for="male">Male</label>&nbsp;
+      <input
+        type="radio"
+        id="gender"
+        name="gender"
+        value="male"
+        [(ngModel)]="model.gender"
+      />
+      &nbsp;
+      <label for="male">Female</label>&nbsp;
+      <input
+        type="radio"
+        id="gender"
+        name="gender"
+        value="female"
+        [(ngModel)]="model.gender"
+      />
+      &nbsp;
+      <label for="other">Other</label>&nbsp;
+      <input
+        type="radio"
+        id="gender"
+        name="gender"
+        value="other"
+        [(ngModel)]="model.gender"
+      />
+    </div>
+    <div class="col-12">
+      <label for="Departure Date">Depature Date</label>&nbsp;
+      <input
+        type="date"
+        id="Departure_Date"
+        name="Departure Date"
+        [(ngModel)]="model.Departure_Date"
+      />
+    </div>
+    <div class="col-12">
+      <label for="Destination Date">Destination Date</label>&nbsp;
+      <input
+        type="date"
+        id="Destination_Date"
+        name="Destination Date"
+        [(ngModel)]="model.Destination_Date"
+      />
+    </div>
+
+    <br />
+    <div class="col-12">
+      <label for="locations">Locations</label>&nbsp;
+      <select name="locations" id="locations" [(ngModel)]="model.locations">
+        <option value="SINGAPORE">SINGAPORE</option>
+        <option value="MALAYSIA">MALAYSIA</option>
+        <option value="AUSTRALIA">AUSTRALIA</option>
+        <option value="GERMANY">GERMANY</option>
+        <option value="LONDON">LONDON</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <label for="Classes">Classes</label>&nbsp;
+      <select name="classes" id="classes" [(ngModel)]="model.classes">
+        <option value="FIRST CLASS">FIRST CLASS</option>
+        <option value="SECOND CLASS">SECOND CLASS</option>
+      </select>
+    </div>
+    <br />
+    <label for="Insurance Policies">Insurance Policies</label>
+    <div class="col-12">
+      <input
+        type="checkbox"
+        id="ins1"
+        name="ins1"
+        value="Domestic Insurance"
+        [(ngModel)]="model.ins1"
+      />
+      &nbsp;<label for="ins1"> Domestic Insurance</label><br />
+      <input
+        type="checkbox"
+        id="ins2"
+        name="ins2"
+        value="International Insurance"
+        [(ngModel)]="model.ins2"
+      />
+      &nbsp;<label for="ins2"> International Insurance</label><br />
+      <input type="checkbox" id="ins3" name="ins3" value="Family Insurance" />
+      &nbsp;<label for="ins3">Family Insurance</label><br />
+      <input type="checkbox" id="ins4" name="ins4" value="Student Insurance" />
+      &nbsp;<label for="ins4">Student Insurance</label><br />
+    </div>
+    <br />
+    <input type="submit" class="btn btn-success" value="save" />
+    
+    
+   
+  </div>
+ 
+</form>
+<!-- style=" width: 50vw; margin-left : 25vw;" -->
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>FIRST NAME</th>
+      <th>LAST NAME</th>
+      <th>EMAIL ID</th>
+      <th>DOB</th>
+      <th>GENDER</th>
+      <th>DEPARTURE DATE</th>
+      <th>DESTINATION DATE</th>
+      <th>LOCATIONS</th>
+      <th>CLASSES</th>
+      <th>INSURANCE POLICIES</th>
+      <th>EDIT</th>
+      <th>DELETE</th>
+    </tr>
+  </thead>
+  <!-- tbody -->
+  <tbody>
+    <tr *ngFor="let flight of flights">
+      <td>{{ flight.id }}</td>
+      <td>{{ flight.fname }}</td>
+      <td>{{ flight.lname }}</td>
+      <td>{{ flight.email }}</td>
+      <td>{{ flight.dob }}</td>
+      <td>{{ flight.gender }}</td>
+      <td>{{ flight.departure_date }}</td>
+      <td>{{ flight.destination_date }}</td>
+      <td>{{ flight.locations }}</td>
+      <td>{{ flight.classes }}</td>
+      <td>{{ flight.insurance_policies }}</td>
+      <td><button (click)="editFlight(flight.id)">edit</button></td>
+      <td><button (click)="deleteFlight(flight.id)">delete</button></td>
+    </tr>
+  </tbody>
+</table>
